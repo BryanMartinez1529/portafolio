@@ -14,7 +14,7 @@ function App() {
         </div>
       </div>
 
-      <div className="flex items-center justify-center w-full h-screen bg-shark-950">
+      <section className="flex items-center justify-center w-full h-screen bg-shark-950">
         <div className="w-5/6 h-4/6 bg-shark-950 flex flex-col justify-between items-center  overflow-hidden  md:flex-row  ">
           <div className="  h-full flex items-center justify-center flex-col w-full md:w-full ">
             <img src="/img/foto_personal.jpg" alt="Foto personal" className="w-52 h-52 rounded-full  shadow-lg drop-shadow-2xl " />
@@ -35,32 +35,32 @@ function App() {
             </p>
           </div>
         </div>
-    </div>
+    </section>
         
        
       
-      <div className='bg-bunker-950 flex h-screen'>
-        <h1 className="font-bold text-white  uppercase text-center">Proyectos</h1>
-        <div className='flex-1 '> 
-           <h1 className="font-bold text-white  uppercase text-center">Proyectos</h1>
+      <section className='bg-bunker-950  h-screen'>
+        <h1 className="font-bold text-white  uppercase text-center p-4">Proyectos</h1>
+        <div className='flex flex-col justify-between mt-4 border h-4/5 w-full items-center md:flex-row'>
+            <div className='flex flex-col border h-96 w-96 shadow-xl rounded-lg m-6'>
+              <h3 className='text-white text-center mt-3'>Proyecto 1</h3>
+              <a href='#' ><img src='/img/foto_personal.jpg' className='w-4/5 h-48 mt-4 items-center' /></a>
+              <p className='text-white'>asdasda</p>
+            </div>
+            <div className='border h-64 w-96 shadow-xl rounded-lg m-6'>
+
+            </div>
+            <div className='border h-64 w-96 shadow-xl rounded-lg m-6'>
+
+            </div>
+           
+
         </div>
-        <div className='py-10  w-full relative   text-white flex-1 ' >
-              <img src="../public/img/foto_personal.jpg" alt="" className='w-max h-40 rounded-full ' />
-              <p className='font-bold text-justify'>Soy un apasionado desarrollador web con experiencia en la
-                creación de sitios web responsivos y funcionales. Tengo
-                habilidades avanzadas en HTML, CSS, JavaScript , así como
-                experiencia en el diseño y desarrollo de interfaces de
-                usuario atractivas. He trabajado en proyectos de diversa
-                envergadura, desde pequeñas empresas hasta grandes
-                corporaciones, siempre enfocado en la excelencia y la
-                satisfacción del cliente. Estoy constantemente aprendiendo
-                nuevas tecnologías y tendencias para seguir creciendo
-                profesionalmente en este campo en constante evolución.
-                </p>
-        </div>
+
+        
        
        
-      </div>
+      </section>
       <Footer />
     </>
   )
