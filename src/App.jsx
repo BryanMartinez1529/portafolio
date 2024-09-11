@@ -2,6 +2,7 @@ import { useState } from 'react'
 
 import NavBar from './components/NavBar'
 import Footer from './components/Footer'
+import RotatingCard from './components/RotatingCard'
 function App() {
   const [count, setCount] = useState(0)
 
@@ -69,6 +70,7 @@ function App() {
       </section>
       <section className='min-h-screen md:h-max bg-shark-950'>
           <h1 className='text-white text-center uppercase text-bold'>Tecnologias</h1>
+          <RotatingCard />
 
       </section>
       <Footer />

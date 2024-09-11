@@ -1,3 +1,23 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Rotación en el eje X: */
+.rotate-x-6 {
+    transform: perspective(1000px) rotateX(10deg); /* Parte superior viene hacia adelante (hacia arriba) */
+  }
+  
+  .rotate-x--6 {
+    transform: perspective(1000px) rotateX(-10deg); /* Parte superior va hacia atrás (hacia abajo) */
+  }
+  
+  /* Rotación en el eje Y: */
+  .rotate-y-6 {
+    transform: perspective(1000px) rotateY(10deg); /* Izquierda hacia adelante (derecha hacia atrás) */
+  }
+  
+  .rotate-y--6 {
+    transform: perspective(1000px) rotateY(-10deg); /* Derecha hacia adelante (izquierda hacia atrás) */
+  }
+  
+  
