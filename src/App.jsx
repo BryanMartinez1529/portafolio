@@ -19,7 +19,7 @@ function App() {
           <div className="  h-full flex items-center justify-center flex-col w-full md:w-full ">
             <img src="/img/foto_personal.jpg" alt="Foto personal" className="w-52 h-52 rounded-full  shadow-lg drop-shadow-2xl " />
             <div className='flex flex-row justify-between'>
-              <img src="/src/assets/icons/link.svg" className="m-4 shadow-lg hover:bg-mantis-800 hover:pointer" />
+              <img width="94" height="94" src="https://img.icons8.com/3d-fluency/94/linkedin.png" alt="linkedin"/>
               <img src="/src/assets/icons/link.svg" className="m-4 shadow-lg hover:bg-mantis-800 hover:pointer" />
               <img src="/src/assets/icons/link.svg" className="m-4 shadow-lg hover:bg-mantis-800 hover:pointer" />
               <a className='hover:pointer'><img src="/src/assets/icons/link.svg" className="m-4 shadow-lg hover:bg-mantis-800 " /></a>
@@ -39,27 +39,37 @@ function App() {
         
        
       
-      <section className='bg-bunker-950  h-screen'>
+      <section className='bg-bunker-950   min-h-screen md:h-max'>
         <h1 className="font-bold text-white  uppercase text-center p-4">Proyectos</h1>
         <div className='flex flex-col justify-between mt-4 border h-4/5 w-full items-center md:flex-row'>
-            <div className='flex flex-col border h-96 w-96 shadow-xl rounded-lg m-6'>
-              <h3 className='text-white text-center mt-3'>Proyecto 1</h3>
-              <a href='#' ><img src='/img/foto_personal.jpg' className='w-4/5 h-48 mt-4 items-center' /></a>
+            <div className='flex flex-col border h-96 w-full max-w-sm md:w-96 shadow-xl rounded-lg m-6 '>
+              <div className='flex flex-col  items-center w-full'>
+                <h3 className='text-white text-center mt-3'>Proyecto 1</h3>
+                <a href='#' ><img src='/img/foto_personal.jpg' className='w-full h-48 mt-4 items-center' /></a>
+              </div>
               <p className='text-white'>asdasda</p>
             </div>
-            <div className='border h-64 w-96 shadow-xl rounded-lg m-6'>
-
+            <div className='border h-96 w-full max-w-sm md:w-96 shadow-xl rounded-lg m-6'>
+                  <div className='flex flex-col  items-center w-full'>
+                    <h3 className='text-white text-center mt-3'>Proyecto 1</h3>
+                    <a href='#' ><img src='/img/foto_personal.jpg' className='w-full h-48 mt-4 items-center' /></a>
+                  </div>
+                  <p className='text-white'>asdasda</p>
             </div>
-            <div className='border h-64 w-96 shadow-xl rounded-lg m-6'>
-
+            <div className='border h-96 w-full max-w-sm md:w-96 shadow-xl rounded-lg m-6'>
+                 <div className='flex flex-col  items-center w-full'>
+                    <h3 className='text-white text-center mt-3'>Proyecto 1</h3>
+                    <a href='#' ><img src='/img/foto_personal.jpg' className='w-full h-48 mt-4 items-center' /></a>
+                  </div>
+                  <p className='text-white'>asdasda</p>
             </div>
            
 
         </div>
+      </section>
+      <section className='min-h-screen md:h-max bg-shark-950'>
+          <h1 className='text-white text-center uppercase text-bold'>Tecnologias</h1>
 
-        
-       
-       
       </section>
       <Footer />
     </>
