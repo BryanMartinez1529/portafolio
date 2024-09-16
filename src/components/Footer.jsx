@@ -2,7 +2,9 @@ import React from 'react'
 
 function Footer() {
   return (
-    <div className='w-full'>Footer</div>
+    <div className='bg-bunker-950   min-h-52 md:h-max'>
+      
+    </div>
   )
 }
 

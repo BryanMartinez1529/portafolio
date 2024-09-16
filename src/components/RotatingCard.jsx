@@ -22,7 +22,7 @@ function RotatingCard() {
   };
 
   return (
-    <div className="max-w-sm mx-auto">
+    <div className="w-96 h-3/5 mx-auto ">
       <div
         className={`bg-white shadow-lg rounded-lg p-6 transform transition-transform duration-500 ${rotationClass}`}
         onMouseMove={handleMouseMove}
