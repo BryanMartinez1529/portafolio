@@ -11,7 +11,7 @@ function App() {
       <NavBar />
       
 
-      <section className="flex items-center justify-center w-full h-screen bg-shark-950">
+      <section  id="perfil" className="flex items-center justify-center w-full h-screen bg-shark-950">
         <div className="w-5/6 h-4/6 bg-shark-950 flex flex-col justify-between items-center  overflow-hidden  md:flex-row  ">
           <div className="  h-full flex items-center justify-center flex-col w-full md:w-full ">
             <img src="/img/foto_personal.jpg" alt="Foto personal" className="w-52 h-52 rounded-full  shadow-lg drop-shadow-2xl " />
@@ -24,7 +24,7 @@ function App() {
           <div className="w-full md:w-full  h-full flex flex-col justify-center items-center  text-white">
             <div className="overflow-hidden whitespace-nowrap bg-shark-950 text-center flex items-center justify-center">
               <div className="inline-block animate-marquee uppercase text-bold text-mantis-400 text-2xl">
-                Bienvenidos
+                Bienvenidos ... ¡
               </div>
             </div>
             <p className="font-bold text-justify px-4 text-sm md:text-base drop-shadow-2xl  ">
@@ -37,43 +37,35 @@ function App() {
           </div>
         </div>
     </section>
-        
-       
+          
+    <section id="proyectos" className="bg-bunker-950 min-h-screen md:h-max flex items-center justify-center flex-col">
+      <h1 className="font-bold text-white uppercase text-center p-4">Proyectos</h1>
       
-    <section className='bg-bunker-950   min-h-screen md:h-max'>
-        <h1 className="font-bold text-white  uppercase text-center p-4">Proyectos</h1>
-        <div className='flex flex-col justify-between mt-4 border h-4/5 w-full items-center md:flex-row'>
-            <div className='flex flex-col border h-96 w-full max-w-sm md:w-96 shadow-xl rounded-lg m-6 '>
-              <div className='flex flex-col  items-center w-full'>
-                <h3 className='text-white text-center mt-3'>Proyecto 1</h3>
-                <a href='#' ><img src='/img/foto_personal.jpg' className='w-full h-48 mt-4 items-center' /></a>
-              </div>
-              <p className='text-white'>asdasda</p>
-            </div>
-            <div className='border h-96 w-full max-w-sm md:w-96 shadow-xl rounded-lg m-6'>
-                  <div className='flex flex-col  items-center w-full'>
-                    <h3 className='text-white text-center mt-3'>Proyecto 1</h3>
-                    <a href='#' ><img src='/img/foto_personal.jpg' className='w-full h-48 mt-4 items-center' /></a>
-                  </div>
-                  <p className='text-white'>asdasda</p>
-            </div>
-            <div className='border h-96 w-full max-w-sm md:w-96 shadow-xl rounded-lg m-6'>
-                 <div className='flex flex-col  items-center w-full'>
-                    <h3 className='text-white text-center mt-3'>Proyecto 1</h3>
-                    <a href='#' ><img src='/img/foto_personal.jpg' className='w-full h-48 mt-4 items-center' /></a>
-                  </div>
-                  <p className='text-white'>asdasda</p>
-            </div>
-           
-
-        </div>
-      </section>
-      <section className='min-h-screen md:h-max bg-shark-950'>
-          <h1 className='text-white text-center uppercase text-bold p-4'>Tecnologias</h1>
+      
+      <div className="flex flex-col justify-between mt-4 h-auto w-4/5 items-center space-y-4 md:space-y-0 md:flex-row md:h-3/5">
+        <div className="h-64 w-full md:w-2/5 m-4">
           <RotatingCard />
+        </div>
+        <div className="h-64 w-full md:w-2/5 m-4">
+          <RotatingCard />
+        </div>
+      </div>
 
-      </section>
-      <Footer />
+     
+      <div className="flex flex-col justify-between mt-4 h-auto w-4/5 items-center space-y-4 md:space-y-0 md:flex-row md:h-3/5">
+        <div className="h-64 w-full md:w-2/5 m-4">
+          <RotatingCard />
+        </div>
+        <div className="h-64 w-full md:w-2/5 m-4">
+          <RotatingCard />
+        </div>
+      </div>
+    </section>
+
+    <section id="tecnologias" className='min-h-screen md:h-max bg-shark-950'>
+          <h1 className='text-white text-center uppercase text-bold p-4'>Tecnologias</h1>          
+    </section>
+    <Footer />
     </>
   )
 }

@@ -22,16 +22,31 @@ function RotatingCard() {
   };
 
   return (
-    <div className="w-96 h-3/5 mx-auto ">
+    <div className="w-full  mx-auto ">
       <div
         className={`bg-white shadow-lg rounded-lg p-6 transform transition-transform duration-500 ${rotationClass}`}
         onMouseMove={handleMouseMove}
         onMouseLeave={handleMouseLeave}
       >
-        <h2 className="text-xl font-bold mb-4">Tarjeta</h2>
-        <p className="text-gray-700">Este es un ejemplo de tarjeta con rotación dinámica en todos los ejes.</p>
+       
+        <div className="relative w-full h-full overflow-hidden rounded-lg shadow-lg group">
+         
+          <img
+            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+            src="src/img/maderas_eternas.png"
+            alt="Maderas Eternas"
+          />
+          
+          <div className="absolute inset-0 bg-black bg-opacity-80 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
+            <div className="text-center text-white px-4">
+              <h3 className="text-lg font-bold mb-2">Maderas Eternas</h3>
+              <p className="text-sm">Aquí va la información adicional que se muestra al pasar el cursor.</p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
+
   );
 }
 
