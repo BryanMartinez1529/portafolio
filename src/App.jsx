@@ -39,31 +39,55 @@ function App() {
     </section>
           
     <section id="proyectos" className="bg-bunker-950 min-h-screen md:h-max flex items-center justify-center flex-col">
-      <h1 className="font-bold text-white uppercase text-center p-4">Proyectos</h1>
+      <h1 className="font-bold text-white uppercase text-center p-4 text-2xl">Proyectos</h1>
       
       
       <div className="flex flex-col justify-between mt-4 h-auto w-4/5 items-center space-y-4 md:space-y-0 md:flex-row md:h-3/5">
-        <div className="h-64 w-full md:w-2/5 m-4">
-          <RotatingCard />
+        <div className="h-64 w-full md:w-3/5 m-4">
+          <RotatingCard 
+            imageSrc={'/img/maderas_eternas.PNG'}
+            titulo={'Maderas Eternas'}
+            descripcion={'Landing Page Maderas Eternas'}
+            hrefcodigo={'https://github.com/BryanMartinez1529/maderas_andrago'}
+            hrefweb={'https://maderaseternas.com'}
+          />
         </div>
-        <div className="h-64 w-full md:w-2/5 m-4">
-          <RotatingCard />
+        <div className="h-64 w-full md:w-3/5 m-4">
+          <RotatingCard
+            imageSrc={'/img/apv.PNG'}
+            titulo={'Administrador de Pacientes'}
+            descripcion={'Ademistrador de Pacientes'}
+            hrefcodigo={'https://github.com/BryanMartinez1529/frontend_apv'}
+            hrefweb={'https://apvfrontend.netlify.app/'}
+          />
         </div>
       </div>
 
      
       <div className="flex flex-col justify-between mt-4 h-auto w-4/5 items-center space-y-4 md:space-y-0 md:flex-row md:h-3/5">
-        <div className="h-64 w-full md:w-2/5 m-4">
-          <RotatingCard />
+        <div className="h-64 w-full md:w-3/5 m-4">
+          <RotatingCard 
+              imageSrc={'/img/cotizador.PNG'}
+              titulo={'Cortizador de Prestamos'}
+              descripcion={'Cotizador de prestamos en base a en plazos de pagos'}
+              hrefcodigo={''}
+              hrefweb={'https://glowing-klepon-45f281.netlify.app/'}
+          />
         </div>
-        <div className="h-64 w-full md:w-2/5 m-4">
-          <RotatingCard />
+        <div className="h-64 w-full md:w-3/5 m-4">
+          <RotatingCard 
+             imageSrc={'/img/agencia_viajes.PNG'}
+             titulo={'Agencias de Viajes'}
+             descripcion={'Agencias de Vaijes con testimoniales'}
+             hrefcodigo={'https://github.com/BryanMartinez1529/agenciasViajesnodejs'}
+             hrefweb={'https://glowing-klepon-45f281.netlify.app/'}
+          />
         </div>
       </div>
     </section>
 
     <section id="tecnologias" className='min-h-screen md:h-max bg-shark-950'>
-          <h1 className='text-white text-center uppercase text-bold p-4'>Tecnologias</h1>          
+          <h1 className='text-white text-center uppercase text-bold p-4 text-2xl'>Tecnologias</h1>          
     </section>
     <Footer />
     </>
