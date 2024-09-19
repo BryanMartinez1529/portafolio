@@ -22,9 +22,9 @@ function RotatingCard({imageSrc,titulo,descripcion,hrefcodigo,hrefweb}) {
   };
 
   return (
-    <div className="w-full  mx-auto ">
+    <div className="w-full  mx-auto h-full">
       <div
-        className={`bg-white shadow-lg rounded-lg p-6 transform transition-transform duration-500 ${rotationClass}`}
+        className={`bg-opacity-590 shadow-lg rounded-lg p-4 transform transition-transform duration-500 ${rotationClass}  w-full h-full`}
         onMouseMove={handleMouseMove}
         onMouseLeave={handleMouseLeave}
       >
@@ -41,28 +41,24 @@ function RotatingCard({imageSrc,titulo,descripcion,hrefcodigo,hrefweb}) {
             <div className="text-center text-white px-4">
               <h3 className="text-lg font-bold mb-2">{titulo}</h3>
               <p className="text-sm">{descripcion}</p>
-              <div className='flex flex-row justify-between  p-2'>
-                 <img className='transform transition duration-500 hover:scale-110' width="40" height="40" src="https://img.icons8.com/ios-filled/40/FFFFFF/html.png" alt="html"/>
-                 <img className='transform transition duration-500 hover:scale-110' width="40" height="40" src="https://img.icons8.com/ios-filled/40/FFFFFF/javascript.png" alt="javascript"/>
-                 <img className='transform transition duration-500 hover:scale-110' width="40" height="40" src="https://img.icons8.com/ios/100/FFFFFF/css-filetype.png" alt="css-filetype"/>
-                 <img className='transform transition duration-500 hover:scale-110' width="40" height="40" src="https://img.icons8.com/material-rounded/24/FFFFFF/tailwind_css.png" alt="tailwind_css"/>
-
+              <div className='flex flex-row justify-between items-center p-2 w-full h-full'>
+                <img className='transform transition duration-500 hover:scale-110' height='40'  width='40' src="https://img.icons8.com/ios-filled/40/FFFFFF/html.png" alt="html" />
+                <img className='transform transition duration-500 hover:scale-110' height='40'  width='40' src="https://img.icons8.com/ios-filled/40/FFFFFF/javascript.png" alt="javascript" />
+                <img className='transform transition duration-500 hover:scale-110' height='40'  width='40' src="https://img.icons8.com/ios/100/FFFFFF/css-filetype.png" alt="css-filetype" />
+                <img className='transform transition duration-500 hover:scale-110' height='40'  width='40' src="https://img.icons8.com/material-rounded/24/FFFFFF/tailwind_css.png" alt="tailwind_css" />
               </div>
-              <div className='flex flex-row justify-between  p-2'>
-                <a className='m-2  h-12 w-40 flex flex-row justify-center items-center bg-mantis-800 rounded-lg'  href={hrefcodigo} target='_black' >
-                 
-                   <img className='transform transition duration-500 hover:scale-110' width="40" height="40" src="https://img.icons8.com/ios-filled/100/FFFFFF/github.png" alt="github"/>
-                   <h3 className="text-center">Código</h3>
-                  
-                 </a>
-                 <a className='m-2  h-12 w-40 flex flex-row justify-center items-center bg-mantis-800 rounded-lg'  href={hrefweb} target='_black' >
-                 
-                   <img className='transform transition duration-500 hover:scale-110' width="40" height="40" src="https://img.icons8.com/ios-filled/48/FFFFFF/web.png" alt="web"/>
-                   <h3 className="text-center">Web</h3>
-                  
-                 </a>
 
+              <div className='flex flex-row justify-between p-2 w-full'>
+                <a className='m-2 h-12 w-full md:w-40 flex flex-row justify-center items-center bg-mantis-800 rounded-lg hover:bg-mantis-900' href={hrefcodigo} target='_blank'>
+                  <img className='transform transition duration-500 hover:scale-110 w-6 h-6 md:w-8 md:h-8' src="https://img.icons8.com/ios-filled/100/FFFFFF/github.png" alt="github" />
+                  <h3 className="text-center text-white ml-2">Código</h3>
+                </a>
+                <a className='m-2 h-12 w-full md:w-40 flex flex-row justify-center items-center bg-mantis-800 rounded-lg hover:bg-mantis-900' href={hrefweb} target='_blank'>
+                  <img className='transform transition duration-500 hover:scale-110 w-6 h-6 md:w-8 md:h-8' src="https://img.icons8.com/ios-filled/48/FFFFFF/web.png" alt="web" />
+                  <h3 className="text-center text-white ml-2">Web</h3>
+                </a>
               </div>
+
             </div>
           </div>
         </div>
