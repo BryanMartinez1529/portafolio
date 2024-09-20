@@ -58,7 +58,7 @@ function RotatingCard({imageSrc,titulo,descripcion,hrefcodigo,hrefweb}) {
                   <h3 className="text-center text-white ml-2">Web</h3>
                 </a>
               </div>
-
+              
             </div>
           </div>
         </div>

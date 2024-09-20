@@ -11,8 +11,8 @@ function App() {
       <NavBar />
       
 
-      <section  id="perfil" className="flex items-center justify-center w-full h-screen ">
-        <div className="w-5/6 h-4/6 flex flex-col justify-between items-center    md:flex-row  ">
+      <section  id="perfil" className="flex items-center justify-center w-full h-screen bg-bunker-950  ">
+        <div className="w-5/6 h-4/6 flex flex-col justify-between items-center    md:flex-row bg-bunker-950  ">
           <div className="  h-full flex items-center justify-center flex-col w-full md:w-full ">
             <img src="/img/foto_personal.jpg" alt="Foto personal" className="w-52 h-52 rounded-full  shadow-lg drop-shadow-2xl " />
             <div className='flex flex-row justify-between  p-2'>
@@ -20,15 +20,15 @@ function App() {
               <a className='m-4'  href='https://github.com/BryanMartinez1529'target='_black' > <img className='transform transition duration-500 hover:scale-110' width="48" height="48" src="https://img.icons8.com/ios-filled/100/FFFFFF/github.png" alt="github"/></a>
               <a className='m-4'  href=''> <img  className='transform transition duration-500 hover:scale-110'  width="48" height="48" src="https://img.icons8.com/material-rounded/48/FFFFFF/mail.png" alt="mail"/></a>
             </div>
-            <a className='text-bold text-white w-32 h-12 text-center flex justify-center items-center rounded-lg bg-mantis-800 hover:bg-mantis-900' href='/cv/CV_Bryan_Martinez.pdf' target='_black' >Visualizar CV</a>
+            <a className='text-bold text-white w-32 h-12 text-center flex justify-center items-center rounded-lg bg-mantis-800 hover:bg-mantis-900 mt-2' href='/cv/CV_Bryan_Martinez.pdf' target='_black' >Visualizar CV</a>
           </div>
-          <div className="w-full md:w-full  h-full flex flex-col justify-center items-center  text-white">
+          <div className="w-full md:w-full  h-full flex flex-col justify-center items-center  text-white ">
             <div className="whitespace-nowrap  text-center flex items-center justify-center">
               <div className="inline-block animate-marquee uppercase text-bold text-mantis-400 text-2xl">
-                Bienvenidos ... ¡
+                Bienvenidos 
               </div>
             </div>
-            <p className="font-bold text-justify px-4 text-sm md:text-base drop-shadow-2xl  ">
+            <p className="font-bold text-justify px-4 text-sm md:text-base drop-shadow-2xl mt-2 ">
               Soy un apasionado desarrollador web con experiencia en la creación de sitios web responsivos y funcionales. 
               Tengo habilidades avanzadas en HTML, CSS, JavaScript, así como experiencia en el diseño y desarrollo de interfaces 
               de usuario atractivas. He trabajado en proyectos de diversa envergadura, desde pequeñas empresas hasta grandes 
@@ -39,8 +39,8 @@ function App() {
         </div>
     </section>
           
-    <section id="proyectos" className="min-h-screen md:h-max flex items-center justify-center flex-col  mt-52 md:mt-0">
-      <h1 className="font-bold text-white uppercase text-center p-4 text-2xl">Proyectos</h1>
+    <section id="proyectos" className="min-h-screen md:h-max flex items-center justify-center flex-col  mt-52 md:mt-0 bg-shark-950 ">
+      <h1 className="font-bold text-white uppercase text-center p-4 text-4xl">Proyectos</h1>
       
       
       <div className="flex flex-col justify-between  h-auto w-full md:w-4/5 items-center space-y-4 md:space-y-0 md:flex-row md:h-3/5 ">
@@ -62,6 +62,7 @@ function App() {
             hrefweb={'https://apvfrontend.netlify.app/'}
           />
         </div>
+        
       </div>
 
      
@@ -87,8 +88,17 @@ function App() {
       </div>
     </section>
 
-    <section id="tecnologias" className='min-h-screen md:h-max '>
-          <h1 className='text-white text-center uppercase text-bold p-4 text-2xl'>Tecnologias</h1>          
+    <section id="tecnologias" className='min-h-screen md:h-max  bg-bunker-950  flex flex-col items-center justify-start'>
+        <h1 className='font-bold text-white  uppercase  text-bold p-4 text-4xl'>Tecnologias</h1> 
+        <div className='border w-3/5 h-3/5 rounded-lg shadow-2xl flex '>
+           <div className='flex flex-row justify-between  p-2'>
+              <a className='m-4' href='https://www.linkedin.com/in/bryan-martinez-04183828a/' target='_black'> <img className='transform transition duration-500 hover:scale-110' width="48" height="48" src="https://img.icons8.com/ios-filled/45/FFFFFF/linkedin.png" alt="linkedin"/></a>
+              <a className='m-4'  href='https://github.com/BryanMartinez1529'target='_black' > <img className='transform transition duration-500 hover:scale-110' width="48" height="48" src="https://img.icons8.com/ios-filled/100/FFFFFF/github.png" alt="github"/></a>
+              <a className='m-4'  href=''> <img  className='transform transition duration-500 hover:scale-110'  width="48" height="48" src="https://img.icons8.com/material-rounded/48/FFFFFF/mail.png" alt="mail"/></a>
+            </div>
+            <h3 className='font-bold text-white '>Sitio Realizado por Bryan Martinez</h3>
+     
+        </div>
     </section>
     <Footer />
     </>
