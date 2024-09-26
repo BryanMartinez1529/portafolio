@@ -42,10 +42,10 @@ function RotatingCard({imageSrc,titulo,descripcion,hrefcodigo,hrefweb}) {
               <h3 className="text-lg font-bold mb-2">{titulo}</h3>
               <p className="text-sm">{descripcion}</p>
               <div className='flex flex-row justify-between items-center p-2 w-full h-full'>
-                <img className='transform transition duration-500 hover:scale-110' height='40'  width='40' src="https://img.icons8.com/ios-filled/40/FFFFFF/html.png" alt="html" />
-                <img className='transform transition duration-500 hover:scale-110' height='40'  width='40' src="https://img.icons8.com/ios-filled/40/FFFFFF/javascript.png" alt="javascript" />
-                <img className='transform transition duration-500 hover:scale-110' height='40'  width='40' src="https://img.icons8.com/ios/100/FFFFFF/css-filetype.png" alt="css-filetype" />
-                <img className='transform transition duration-500 hover:scale-110' height='40'  width='40' src="https://img.icons8.com/material-rounded/24/FFFFFF/tailwind_css.png" alt="tailwind_css" />
+                <img className='transform transition duration-500 hover:scale-110' height='40'  width='40' src="/icons/html.svg" alt="html" />
+                <img className='transform transition duration-500 hover:scale-110' height='40'  width='40' src="/icons/javascript.svg" alt="javascript" />
+                <img className='transform transition duration-500 hover:scale-110' height='40'  width='40' src="/icons/css.svg" alt="css-filetype" />
+                <img className='transform transition duration-500 hover:scale-110' height='40'  width='40' src="/icons/tailwindcss.svg" alt="tailwind_css" />
               </div>
 
               <div className='flex flex-row justify-between p-2 w-full'>
