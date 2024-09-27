@@ -4,6 +4,7 @@ import NavBar from './components/NavBar'
 import Footer from './components/Footer'
 import RotatingCard from './components/RotatingCard'
 import ImageCarousel from './components/ImagenCarousel'
+
 function App() {
 
   
@@ -41,7 +42,11 @@ function App() {
                   <img src="/icons/mysql.svg" alt="Mysql" className="h-12 w-12 cursor-pointer selection:transform transition duration-500 hover:scale-110" />
                   <img src="/icons/postgresql.svg" alt="Posgrest" className="h-12 w-12 cursor-pointer selection:transform transition duration-500 hover:scale-110" />
                   <img src="/icons/mongo.svg" alt="MongoDB" className="h-12 w-12 cursor-pointer selection:transform transition duration-500 hover:scale-110" />
+                  <img src="/icons/git.svg" alt="Git" className="h-12 w-12 cursor-pointer selection:transform transition duration-500 hover:scale-110" />
+                  <img src="/icons/linux.svg" alt="Linux" className="h-12 w-12 cursor-pointer selection:transform transition duration-500 hover:scale-110" />
+
                 </div>
+
             </div>
           
           </div>
@@ -60,6 +65,12 @@ function App() {
             descripcion={'Landing Page Maderas Eternas'}
             hrefcodigo={'https://github.com/BryanMartinez1529/maderas_andrago'}
             hrefweb={'https://maderaseternas.com'}
+            icons={[
+              { src: '/icons/html.svg', alt: 'html' },
+              { src: '/icons/css.svg', alt: 'css' },
+              { src: '/icons/javascript.svg', alt: 'javascript' },
+              { src: '/icons/tailwindcss.svg', alt: 'tailwindcss' }
+            ]}
           />
         </div>
         <div className="h-64 w-full md:w-3/5 m-4 p-2">
@@ -69,6 +80,15 @@ function App() {
             descripcion={'Administrador de Pacientes'}
             hrefcodigo={'https://github.com/BryanMartinez1529/frontend_apv'}
             hrefweb={'https://apvfrontend.netlify.app/'}
+            icons={[
+              {src: '/icons/html.svg', alt: 'html'},
+              { src: '/icons/css.svg', alt: 'css' },
+              { src: '/icons/javascript.svg', alt: 'javascript' },
+              { src: '/icons/tailwindcss.svg', alt: 'tailwindcss' },
+              { src: '/icons/react.svg', alt: 'react' },
+              { src: '/icons/nodejs.svg', alt: 'nodejs' },
+              { src: '/icons/mongo.svg', alt: 'mongodb' },
+            ] }
           />
         </div>
         
@@ -83,6 +103,13 @@ function App() {
               descripcion={'Cotizador de prestamos en base a en plazos de pagos'}
               hrefcodigo={''}
               hrefweb={'https://glowing-klepon-45f281.netlify.app/'}
+              icons={[{src: '/icons/html.svg', alt: 'html'},
+                { src: '/icons/css.svg', alt: 'css' },
+                { src: '/icons/javascript.svg', alt: 'javascript' },
+                { src: '/icons/tailwindcss.svg', alt: 'tailwindcss' },
+                { src: '/icons/react.svg', alt: 'react' },
+
+              ] }
           />
         </div>
         <div className="h-64 w-full md:w-3/5 m-4 p-2">
@@ -92,6 +119,15 @@ function App() {
              descripcion={'Agencias de Vaijes con testimoniales'}
              hrefcodigo={'https://github.com/BryanMartinez1529/agenciasViajesnodejs'}
              hrefweb={'https://glowing-klepon-45f281.netlify.app/'}
+             icons={[{src: '/icons/html.svg', alt: 'html'},
+              { src: '/icons/css.svg', alt: 'css' },
+              { src: '/icons/javascript.svg', alt: 'javascript' },
+              { src: '/icons/tailwindcss.svg', alt: 'tailwindcss' },
+              { src: '/icons/react.svg', alt: 'react' },
+              { src: '/icons/nodejs.svg', alt: 'nodejs' },
+              { src: '/icons/mysql.svg', alt: 'mysql' },
+
+             ] }
           />
         </div>
       </div>
