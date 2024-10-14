@@ -39,17 +39,16 @@ function RotatingCard({imageSrc,titulo,descripcion,hrefcodigo,hrefweb,icons}) {
             alt={titulo}
           />
           
-          <div className="absolute inset-0 bg-black bg-opacity-80 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
+          <div className="absolute inset-0 bg-black bg-opacity-80 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center m-auto">
             <div className="text-center text-white px-4">
               <h3 className="text-lg font-bold mb-2">{titulo}</h3>
               <p className="text-sm">{descripcion}</p>
-              <div className='flex flex-row justify-between items-center p-2 w-full h-full'>
+              <div className='flex flex-row justify-between items-center w-full p-2 h-full m-auto '>
               {icons.map((icon, index) => (
                   <img
                     key={index}
-                    className='transform transition duration-500 hover:scale-110 m-2'
-                    height='40'
-                    width='40'
+                    className='transform transition duration-500 hover:scale-110 m-2 hover:cursor-pointer h-8 w-10'
+                    
                     src={icon.src}
                     alt={icon.alt}
                   />

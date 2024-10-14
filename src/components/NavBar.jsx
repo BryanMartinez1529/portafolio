@@ -39,8 +39,8 @@ function NavBar() {
      
       <ul
         className={`${
-          isOpen ? "block bg-black " : "hidden"
-        } absolute bg-opacity-70  backdrop-blur-md top-12 left-0 right-0 flex flex-col items-center justify-center md:static md:flex md:flex-row md:items-center md:justify-center font-bold transition-transform duration-500 ease-in-out`}
+          isOpen ? "block bg-shark-950 " : "hidden"
+        } absolute bg-opacity-70  backdrop-blur-md top-14 left-0 right-0 flex flex-col items-center justify-center md:static md:flex md:flex-row md:items-center md:justify-center font-bold transition-transform duration-500 ease-in-out`}
       >
         <li className="py-3 p-5 xl:p-6 md:py-0">
           <a href="#perfil" className="hover:text-mantis-400">
