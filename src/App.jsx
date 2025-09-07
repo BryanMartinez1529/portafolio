@@ -142,7 +142,7 @@ function App() {
                   
                   <label className='text-white font-bold text-xl'>Correo</label>
                   <input type='text' className='bg-shark-950 w-full mt-4 p-2 rounded-lg' placeholder='Correo'></input>
-                  <label className='text-white font-bold text-xl'>Descripcion</label>
+                  <label className='text-white font-bold text-xl'>Descripción</label>
                   <input type='text' className='bg-shark-950 w-full mt-4 p-6 rounded-lg' placeholder='Descripcion' ></input>
                   <button className='w-full h-12 bg-mantis-900 text-white font-medium mt-4 rounded-lg' >Enviar</button>
               </form>
