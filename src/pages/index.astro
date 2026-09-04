@@ -1,0 +1,25 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Hero from '../components/Hero.astro';
+import About from '../components/About.astro';
+import Skills from '../components/Skills.astro';
+import Projects from '../components/Projects.astro';
+import Contact from '../components/Contact.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout
+  title="Bryan Martinez | Ingeniero en Sistemas - FullStack Developer"
+  description="Portafolio profesional de Bryan Martinez, Ingeniero en Sistemas y Desarrollador Full Stack. Proyectos destacados en React, Astro, Node.js, Laravel y bases de datos escalables."
+>
+  <Navbar />
+  <main class="flex-1">
+    <Hero />
+    <About />
+    <Skills />
+    <Projects />
+    <Contact />
+  </main>
+  <Footer />
+</Layout>

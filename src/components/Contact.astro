@@ -1,0 +1,279 @@
+---
+// Contact.astro - Contact section with direct email copying, social links and interactive form
+---
+
+<section id="contacto" class="relative py-24 overflow-hidden bg-[#060a12]/80">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Section Header -->
+    <div class="flex flex-col items-center text-center mb-16">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 text-xs font-mono-code font-semibold tracking-wider uppercase mb-3">
+        &lt;Hablemos /&gt;
+      </div>
+      <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white tracking-tight">
+        ¿Tienes un Proyecto o <span class="bg-gradient-to-r from-cyan-400 via-indigo-400 to-emerald-400 bg-clip-text text-transparent">Propuesta?</span>
+      </h2>
+      <p class="mt-4 text-slate-400 text-base md:text-lg max-w-2xl">
+        Estoy disponible para posiciones full-time, consultorías o proyectos desafiantes. Escríbeme y creemos algo extraordinario juntos.
+      </p>
+    </div>
+
+    <!-- Contact Grid -->
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+      
+      <!-- Left Column: Direct Info & Quick Copy -->
+      <div class="lg:col-span-5 flex flex-col justify-between space-y-6">
+        
+        <div class="space-y-6">
+          <h3 class="text-2xl font-bold text-white">
+            Información de Contacto
+          </h3>
+          <p class="text-slate-300 text-sm leading-relaxed">
+            Puedes ponerte en contacto conmigo a través de cualquiera de mis canales oficiales o enviando un mensaje directo mediante el formulario.
+          </p>
+
+          <!-- Email Copy Card -->
+          <div class="glass-panel p-5 rounded-2xl border border-white/10 relative overflow-hidden group">
+            <div class="flex items-center justify-between">
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-xl bg-cyan-500/10 text-cyan-400 flex items-center justify-center">
+                  <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                  </svg>
+                </div>
+                <div>
+                  <p class="text-xs text-slate-400 font-mono-code">Correo Electrónico</p>
+                  <p id="email-text" class="text-sm font-semibold text-white">bryanwladimir8@gmail.com</p>
+                </div>
+              </div>
+
+              <!-- Copy Button -->
+              <button
+                id="copy-email-btn"
+                type="button"
+                class="p-2.5 rounded-xl bg-slate-900 border border-white/10 hover:border-cyan-400 text-slate-300 hover:text-white transition-all duration-200"
+                title="Copiar correo"
+              >
+                <svg id="copy-email-icon" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <!-- Social Channels Grid -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <!-- LinkedIn -->
+            <a
+              href="https://www.linkedin.com/in/bryan-martinez-04183828a/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="glass-panel p-4 rounded-xl border border-white/5 hover:border-cyan-500/40 hover:bg-slate-900/80 transition-all duration-300 flex items-center gap-3 group"
+            >
+              <div class="w-9 h-9 rounded-lg bg-blue-500/10 text-blue-400 flex items-center justify-center group-hover:scale-110 transition-transform">
+                <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                  <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9h2.79v8.37H6.46v-8.37M7.86 6.32a1.63 1.63 0 1 0 0 3.26 1.63 1.63 0 0 0 0-3.26Z"/>
+                </svg>
+              </div>
+              <div>
+                <p class="text-xs text-slate-400">Red Profesional</p>
+                <p class="text-sm font-bold text-white group-hover:text-cyan-400 transition-colors">LinkedIn</p>
+              </div>
+            </a>
+
+            <!-- GitHub -->
+            <a
+              href="https://github.com/BryanMartinez1529"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="glass-panel p-4 rounded-xl border border-white/5 hover:border-cyan-500/40 hover:bg-slate-900/80 transition-all duration-300 flex items-center gap-3 group"
+            >
+              <div class="w-9 h-9 rounded-lg bg-purple-500/10 text-purple-400 flex items-center justify-center group-hover:scale-110 transition-transform">
+                <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" />
+                </svg>
+              </div>
+              <div>
+                <p class="text-xs text-slate-400">Repositorios</p>
+                <p class="text-sm font-bold text-white group-hover:text-cyan-400 transition-colors">GitHub</p>
+              </div>
+            </a>
+          </div>
+
+          <!-- Availability Note -->
+          <div class="p-4 rounded-xl bg-emerald-500/5 border border-emerald-500/20 text-xs text-emerald-300 flex items-center gap-3">
+            <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></span>
+            <span>Respuesta en menos de 24 horas · Abierto a contratación inmediata</span>
+          </div>
+        </div>
+
+        <!-- Download CV Badge Link -->
+        <a
+          href="/cv/CV_Bryan_Martinez.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="glass-panel p-4 rounded-xl border border-white/5 hover:border-white/20 flex items-center justify-between text-slate-300 hover:text-white transition-all group"
+        >
+          <div class="flex items-center gap-3">
+            <span class="text-xl">📄</span>
+            <div>
+              <p class="text-xs text-slate-400 font-mono-code">Currículum Vitae</p>
+              <p class="text-sm font-bold text-white">Descargar CV_Bryan_Martinez.pdf</p>
+            </div>
+          </div>
+          <svg class="w-5 h-5 text-cyan-400 group-hover:translate-y-0.5 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+          </svg>
+        </a>
+
+      </div>
+
+      <!-- Right Column: Interactive Contact Form -->
+      <div class="lg:col-span-7">
+        <div class="glass-panel rounded-3xl p-6 sm:p-8 border border-white/10 shadow-2xl relative">
+          
+          <h3 class="text-xl font-bold text-white mb-6 flex items-center gap-2">
+            <span>Envíame un mensaje</span>
+            <span class="text-xs px-2.5 py-0.5 rounded-full bg-cyan-500/10 text-cyan-400 font-mono-code">Directo</span>
+          </h3>
+
+          <form id="contact-form" class="space-y-4">
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <!-- Name -->
+              <div class="space-y-1.5">
+                <label for="contact-name" class="text-xs font-semibold text-slate-300 font-mono-code">
+                  Tu Nombre <span class="text-cyan-400">*</span>
+                </label>
+                <input
+                  type="text"
+                  id="contact-name"
+                  required
+                  placeholder="Ej: Carlos Mendoza"
+                  class="w-full px-4 py-3 rounded-xl bg-slate-900/90 border border-white/10 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 transition-all"
+                />
+              </div>
+
+              <!-- Email -->
+              <div class="space-y-1.5">
+                <label for="contact-email" class="text-xs font-semibold text-slate-300 font-mono-code">
+                  Tu Correo <span class="text-cyan-400">*</span>
+                </label>
+                <input
+                  type="email"
+                  id="contact-email"
+                  required
+                  placeholder="tu.correo@ejemplo.com"
+                  class="w-full px-4 py-3 rounded-xl bg-slate-900/90 border border-white/10 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 transition-all"
+                />
+              </div>
+            </div>
+
+            <!-- Subject -->
+            <div class="space-y-1.5">
+              <label for="contact-subject" class="text-xs font-semibold text-slate-300 font-mono-code">
+                Asunto / Tipo de Proyecto
+              </label>
+              <select
+                id="contact-subject"
+                class="w-full px-4 py-3 rounded-xl bg-slate-900/90 border border-white/10 text-slate-200 text-sm focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 transition-all"
+              >
+                <option value="Desarrollo Web Full Stack">Desarrollo Web Full Stack</option>
+                <option value="Frontend React / Astro">Frontend React / Astro</option>
+                <option value="Backend & APIs (Node/Laravel)">Backend & APIs (Node/Laravel)</option>
+                <option value="Propuesta Laboral / Contratación">Propuesta Laboral / Contratación</option>
+                <option value="Consulta General">Consulta General</option>
+              </select>
+            </div>
+
+            <!-- Message -->
+            <div class="space-y-1.5">
+              <label for="contact-message" class="text-xs font-semibold text-slate-300 font-mono-code">
+                Mensaje <span class="text-cyan-400">*</span>
+              </label>
+              <textarea
+                id="contact-message"
+                rows="4"
+                required
+                placeholder="Cuéntame sobre tu proyecto, objetivos, plazos o detalles de la posición..."
+                class="w-full px-4 py-3 rounded-xl bg-slate-900/90 border border-white/10 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 transition-all resize-y"
+              ></textarea>
+            </div>
+
+            <!-- Submit Button -->
+            <button
+              type="submit"
+              id="contact-submit-btn"
+              class="w-full py-3.5 px-6 rounded-xl font-semibold text-white bg-gradient-to-r from-cyan-500 via-indigo-500 to-emerald-500 hover:from-cyan-400 hover:to-emerald-400 shadow-lg shadow-cyan-500/25 transition-all duration-300 flex items-center justify-center gap-2 group text-sm"
+            >
+              <span>Enviar Mensaje</span>
+              <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+              </svg>
+            </button>
+
+            <!-- Feedback Alert -->
+            <div id="form-feedback" class="hidden p-3 rounded-xl text-center text-xs font-medium mt-3"></div>
+
+          </form>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Notification Toast for Copy -->
+<div
+  id="copy-toast"
+  class="fixed bottom-6 right-6 z-50 transform translate-y-20 opacity-0 transition-all duration-300 pointer-events-none glass-panel px-4 py-3 rounded-2xl border border-cyan-500/40 shadow-2xl flex items-center gap-3 text-white text-sm"
+>
+  <span class="w-2.5 h-2.5 rounded-full bg-cyan-400"></span>
+  <span>¡Correo copiado al portapapeles!</span>
+</div>
+
+<script>
+  // Copy email handler
+  const copyBtn = document.getElementById('copy-email-btn');
+  const toast = document.getElementById('copy-toast');
+  const emailVal = 'bryanwladimir8@gmail.com';
+
+  if (copyBtn && toast) {
+    copyBtn.addEventListener('click', () => {
+      navigator.clipboard.writeText(emailVal).then(() => {
+        toast.classList.remove('translate-y-20', 'opacity-0');
+        toast.classList.add('translate-y-0', 'opacity-100');
+        setTimeout(() => {
+          toast.classList.remove('translate-y-0', 'opacity-100');
+          toast.classList.add('translate-y-20', 'opacity-0');
+        }, 2500);
+      });
+    });
+  }
+
+  // Contact form submission handler (generates mailto link with prefilled body)
+  const form = document.getElementById('contact-form') as HTMLFormElement | null;
+  const feedback = document.getElementById('form-feedback');
+
+  if (form && feedback) {
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const name = (document.getElementById('contact-name') as HTMLInputElement).value;
+      const email = (document.getElementById('contact-email') as HTMLInputElement).value;
+      const subject = (document.getElementById('contact-subject') as HTMLSelectElement).value;
+      const message = (document.getElementById('contact-message') as HTMLTextAreaElement).value;
+
+      // Construct mailto link
+      const mailtoUrl = `mailto:bryanwladimir8@gmail.com?subject=${encodeURIComponent(`[Portafolio] ${subject} - ${name}`)}&body=${encodeURIComponent(`Nombre: ${name}\nCorreo: ${email}\nTipo: ${subject}\n\nMensaje:\n${message}`)}`;
+      
+      feedback.classList.remove('hidden', 'bg-rose-500/10', 'text-rose-300');
+      feedback.classList.add('bg-emerald-500/10', 'text-emerald-300', 'border', 'border-emerald-500/20');
+      feedback.textContent = '¡Abriendo tu gestor de correo para enviar el mensaje!';
+
+      setTimeout(() => {
+        window.location.href = mailtoUrl;
+      }, 500);
+    });
+  }
+</script>

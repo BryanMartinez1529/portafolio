@@ -1,0 +1,231 @@
+---
+// Projects.astro - Showcase of Bryan's real-world projects with interactive filters
+const projects = [
+  {
+    id: 'maderas-eternas',
+    category: 'frontend',
+    categoryLabel: 'Landing & Comercial',
+    title: 'Maderas Eternas',
+    description: 'Landing page comercial y catálogo digital para empresa de maderas y acabados de construcción. Diseñada con alta fidelidad gráfica, optimización de velocidad Core Web Vitals y diseño completamente responsivo orientado a captación de clientes.',
+    image: '/img/maderas_eternas.PNG',
+    tags: ['HTML5', 'CSS3', 'JavaScript', 'Tailwind CSS'],
+    highlights: ['Diseño Responsivo', 'SEO & Core Web Vitals', 'Alta Conversión'],
+    demoUrl: 'https://maderaseternas.com',
+    githubUrl: 'https://github.com/BryanMartinez1529/maderas_andrago',
+    featured: true
+  },
+  {
+    id: 'apv-veterinaria',
+    category: 'fullstack',
+    categoryLabel: 'Full Stack MERN',
+    title: 'Administrador de Pacientes (APV)',
+    description: 'Sistema web integral para clínicas veterinarias. Permite el control clínico completo, registro de pacientes, gestión de citas y propietarios, con autenticación robusta mediante tokens JWT y base de datos reactiva en MongoDB.',
+    image: '/img/apv.PNG',
+    tags: ['React', 'Node.js', 'Express', 'MongoDB', 'Tailwind CSS'],
+    highlights: ['CRUD Completo', 'Autenticación JWT', 'MongoDB NoSQL'],
+    demoUrl: 'https://apvfrontend.netlify.app/',
+    githubUrl: 'https://github.com/BryanMartinez1529/frontend_apv',
+    featured: true
+  },
+  {
+    id: 'cotizador-prestamos',
+    category: 'frontend',
+    categoryLabel: 'FinTech / Calculadora',
+    title: 'Cotizador de Préstamos Inteligente',
+    description: 'Simulador financiero interactivo que calcula en tiempo real las cuotas mensuales, amortización e intereses acumulados según el plazo y monto elegidos por el usuario, proporcionando una experiencia visual clara y sin fricciones.',
+    image: '/img/cotizador.PNG',
+    tags: ['React', 'JavaScript', 'Tailwind CSS', 'Vite'],
+    highlights: ['Cálculo en Tiempo Real', 'Desglose Financiero', 'Interactividad Reactiva'],
+    demoUrl: 'https://glowing-klepon-45f281.netlify.app/',
+    githubUrl: '',
+    featured: false
+  },
+  {
+    id: 'agencia-viajes',
+    category: 'fullstack',
+    categoryLabel: 'Full Stack MVC',
+    title: 'Agencias de Viajes & Turismo',
+    description: 'Plataforma web turística estructurada con patrón MVC (Modelo-Vista-Controlador). Cuenta con exploración de destinos turísticos, módulo dinámico de testimoniales y conexión a base de datos relacional MySQL.',
+    image: '/img/agencia_viajes.PNG',
+    tags: ['Node.js', 'Express', 'MySQL', 'Tailwind CSS', 'Arquitectura MVC'],
+    highlights: ['Patrón MVC', 'Base de Datos MySQL', 'Gestor de Testimoniales'],
+    demoUrl: 'https://glowing-klepon-45f281.netlify.app/',
+    githubUrl: 'https://github.com/BryanMartinez1529/agenciasViajesnodejs',
+    featured: false
+  }
+];
+
+const filterButtons = [
+  { label: 'Todos los Proyectos', filter: 'all' },
+  { label: 'Full Stack', filter: 'fullstack' },
+  { label: 'Frontend', filter: 'frontend' },
+];
+---
+
+<section id="proyectos" class="relative py-24 overflow-hidden">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Section Header -->
+    <div class="flex flex-col items-center text-center mb-12">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-mono-code font-semibold tracking-wider uppercase mb-3">
+        &lt;Portafolio de Proyectos /&gt;
+      </div>
+      <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white tracking-tight">
+        Trabajos & <span class="bg-gradient-to-r from-emerald-400 via-cyan-400 to-indigo-400 bg-clip-text text-transparent">Soluciones Desarrolladas</span>
+      </h2>
+      <p class="mt-4 text-slate-400 text-base md:text-lg max-w-2xl">
+        Una muestra de proyectos reales que combinan calidad de código, interfaces atractivas y arquitecturas listas para producción.
+      </p>
+
+      <!-- Category Filter Pills -->
+      <div class="flex flex-wrap items-center justify-center gap-2 mt-8 p-1.5 rounded-full bg-slate-900/80 border border-white/5">
+        {filterButtons.map((btn, idx) => (
+          <button
+            type="button"
+            data-filter={btn.filter}
+            class={`project-filter-btn px-5 py-2 rounded-full text-xs sm:text-sm font-semibold transition-all duration-200 ${
+              idx === 0
+                ? 'bg-gradient-to-r from-cyan-500 to-indigo-600 text-white shadow-md shadow-cyan-500/20'
+                : 'text-slate-400 hover:text-white hover:bg-white/5'
+            }`}
+          >
+            {btn.label}
+          </button>
+        ))}
+      </div>
+    </div>
+
+    <!-- Projects Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8" id="projects-grid">
+      {projects.map((project) => (
+        <article
+          data-category={project.category}
+          class="project-card glass-panel rounded-2xl overflow-hidden border border-white/10 flex flex-col justify-between group hover:border-cyan-500/40 hover:shadow-2xl hover:shadow-cyan-500/10 transition-all duration-300"
+        >
+          <!-- Project Preview Image with Overlay -->
+          <div class="relative w-full h-56 sm:h-64 overflow-hidden bg-slate-950">
+            <img
+              src={project.image}
+              alt={`Captura del proyecto ${project.title}`}
+              class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
+              loading="lazy"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent"></div>
+            
+            <!-- Category Badge -->
+            <div class="absolute top-4 left-4">
+              <span class="px-3 py-1 rounded-full text-xs font-semibold bg-slate-950/80 backdrop-blur-md border border-white/10 text-cyan-300 shadow-md">
+                {project.categoryLabel}
+              </span>
+            </div>
+
+            <!-- Featured Star if applicable -->
+            {project.featured && (
+              <div class="absolute top-4 right-4">
+                <span class="px-2.5 py-1 rounded-full text-[11px] font-semibold bg-amber-500/20 text-amber-300 border border-amber-500/30 flex items-center gap-1 backdrop-blur-md">
+                  ★ Destacado
+                </span>
+              </div>
+            )}
+          </div>
+
+          <!-- Project Content Body -->
+          <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+            <div>
+              <h3 class="text-xl font-bold text-white group-hover:text-cyan-400 transition-colors">
+                {project.title}
+              </h3>
+              
+              <p class="mt-3 text-slate-300 text-sm leading-relaxed">
+                {project.description}
+              </p>
+
+              <!-- Highlights -->
+              <div class="flex flex-wrap gap-1.5 mt-4">
+                {project.highlights.map((item) => (
+                  <span class="text-[11px] px-2 py-0.5 rounded-md bg-white/5 border border-white/5 text-slate-300">
+                    ✓ {item}
+                  </span>
+                ))}
+              </div>
+            </div>
+
+            <!-- Tech Stack Tags & Actions -->
+            <div class="pt-4 border-t border-white/5 space-y-4">
+              <div class="flex flex-wrap gap-1.5">
+                {project.tags.map((tag) => (
+                  <span class="text-xs font-mono-code px-2.5 py-1 rounded-lg bg-slate-900 border border-white/5 text-cyan-300">
+                    {tag}
+                  </span>
+                ))}
+              </div>
+
+              <!-- Action Links -->
+              <div class="flex items-center gap-3 pt-2">
+                {project.demoUrl && (
+                  <a
+                    href={project.demoUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="flex-1 flex items-center justify-center gap-2 py-2.5 px-4 rounded-xl text-xs sm:text-sm font-semibold text-white bg-gradient-to-r from-cyan-500 to-indigo-600 hover:from-cyan-400 hover:to-indigo-500 shadow-md shadow-cyan-500/20 transition-all duration-200"
+                  >
+                    <span>Ver Demo en Vivo</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                    </svg>
+                  </a>
+                )}
+
+                {project.githubUrl && (
+                  <a
+                    href={project.githubUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="flex items-center justify-center gap-2 py-2.5 px-4 rounded-xl text-xs sm:text-sm font-semibold text-slate-200 hover:text-white bg-slate-900 hover:bg-slate-800 border border-white/10 hover:border-slate-500 transition-all duration-200"
+                    title="Ver repositorio en GitHub"
+                  >
+                    <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" />
+                    </svg>
+                    <span>Código</span>
+                  </a>
+                )}
+              </div>
+            </div>
+
+          </div>
+        </article>
+      ))}
+    </div>
+
+  </div>
+</section>
+
+<!-- Filter Script -->
+<script>
+  const filterBtns = document.querySelectorAll('.project-filter-btn');
+  const projectCards = document.querySelectorAll('.project-card');
+
+  filterBtns.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      // Update active button state
+      filterBtns.forEach((b) => {
+        b.classList.remove('bg-gradient-to-r', 'from-cyan-500', 'to-indigo-600', 'text-white', 'shadow-md', 'shadow-cyan-500/20');
+        b.classList.add('text-slate-400', 'hover:text-white', 'hover:bg-white/5');
+      });
+      btn.classList.add('bg-gradient-to-r', 'from-cyan-500', 'to-indigo-600', 'text-white', 'shadow-md', 'shadow-cyan-500/20');
+      btn.classList.remove('text-slate-400', 'hover:text-white', 'hover:bg-white/5');
+
+      const filterVal = btn.getAttribute('data-filter');
+
+      projectCards.forEach((card) => {
+        const category = card.getAttribute('data-category');
+        if (filterVal === 'all' || category === filterVal) {
+          (card as HTMLElement).style.display = 'flex';
+        } else {
+          (card as HTMLElement).style.display = 'none';
+        }
+      });
+    });
+  });
+</script>
