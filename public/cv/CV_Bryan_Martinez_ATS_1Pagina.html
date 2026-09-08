@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CV Bryan Martinez - ATS 1 Página</title>
+  <style>
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      font-size: 8.5pt;
+      line-height: 1.32;
+      color: #1a202c;
+      background-color: #f1f5f9;
+      padding: 15px 0;
+    }
+
+    .resume-container {
+      width: 210mm;
+      max-width: 210mm;
+      margin: 0 auto;
+      background: #ffffff;
+      padding: 10mm 12mm;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+      box-sizing: border-box;
+    }
+
+    header {
+      border-bottom: 2px solid #0284c7;
+      padding-bottom: 6px;
+      margin-bottom: 9px;
+      text-align: center;
+    }
+
+    .candidate-name {
+      font-size: 16pt;
+      font-weight: 800;
+      color: #0f172a;
+      letter-spacing: -0.3px;
+      text-transform: uppercase;
+      line-height: 1.1;
+      margin-bottom: 2px;
+    }
+
+    .candidate-title {
+      font-size: 10pt;
+      font-weight: 700;
+      color: #0284c7;
+      margin-bottom: 5px;
+    }
+
+    .contact-info {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 3px 8px;
+      font-size: 8pt;
+      color: #475569;
+    }
+
+    .contact-item a {
+      color: #0f172a;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .separator {
+      color: #94a3b8;
+    }
+
+    section {
+      margin-bottom: 8px;
+    }
+
+    .section-title {
+      font-size: 9.5pt;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: #0f172a;
+      border-bottom: 1px solid #cbd5e1;
+      padding-bottom: 1px;
+      margin-bottom: 4px;
+    }
+
+    p.summary {
+      font-size: 8.3pt;
+      color: #334155;
+      text-align: justify;
+      line-height: 1.32;
+    }
+
+    .skills-block {
+      font-size: 8.2pt;
+      line-height: 1.3;
+    }
+
+    .skills-row {
+      margin-bottom: 2px;
+    }
+
+    .skills-row strong {
+      color: #0f172a;
+    }
+
+    .item-block {
+      margin-bottom: 6px;
+    }
+
+    .item-block:last-child {
+      margin-bottom: 0;
+    }
+
+    .item-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 8px;
+      margin-bottom: 1px;
+    }
+
+    .item-title {
+      font-size: 8.8pt;
+      font-weight: 700;
+      color: #0f172a;
+    }
+
+    .item-date {
+      font-size: 8pt;
+      font-weight: 600;
+      color: #475569;
+      white-space: nowrap;
+    }
+
+    .item-subheader {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      font-size: 8.2pt;
+      font-weight: 600;
+      color: #0369a1;
+      margin-bottom: 2px;
+    }
+
+    .item-location {
+      font-size: 7.8pt;
+      color: #64748b;
+      font-weight: normal;
+      font-style: italic;
+    }
+
+    ul.item-bullets {
+      margin-left: 14px;
+    }
+
+    ul.item-bullets li {
+      margin-bottom: 2px;
+      color: #334155;
+      font-size: 8.2pt;
+      line-height: 1.28;
+      text-align: justify;
+    }
+
+    ul.item-bullets li strong {
+      color: #0f172a;
+      font-weight: 600;
+    }
+
+    .education-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+    }
+
+    @media print {
+      body {
+        background: #ffffff;
+        padding: 0;
+      }
+
+      .resume-container {
+        width: 100%;
+        margin: 0;
+        padding: 8mm 10mm;
+        box-shadow: none;
+      }
+
+      @page {
+        size: A4;
+        margin: 0;
+      }
+
+      .no-print {
+        display: none !important;
+      }
+    }
+
+    .toolbar {
+      width: 210mm;
+      margin: 0 auto 10px auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #0f172a;
+      color: #f8fafc;
+      padding: 8px 14px;
+      border-radius: 6px;
+      font-size: 8.5pt;
+    }
+
+    .toolbar-btn {
+      background: #0284c7;
+      color: #ffffff;
+      border: none;
+      padding: 6px 14px;
+      font-weight: 600;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="toolbar no-print">
+    <span><strong>Bryan Martinez — Formato ATS Estricto (1 Página)</strong></span>
+    <button class="toolbar-btn" onclick="window.print()">🖨️ Imprimir / PDF</button>
+  </div>
+
+  <main class="resume-container">
+
+    <!-- HEADER -->
+    <header>
+      <h1 class="candidate-name">Bryan Wladimir Martinez Palacios</h1>
+      <div class="candidate-title">Ingeniero en Sistemas de Información | Desarrollador Full Stack</div>
+      <div class="contact-info">
+        <span class="contact-item">Quito, Ecuador</span>
+        <span class="separator">•</span>
+        <span class="contact-item"><a href="tel:+593995029039">+593 995 029 039</a></span>
+        <span class="separator">•</span>
+        <span class="contact-item"><a href="mailto:bryanwladimir8@gmail.com">bryanwladimir8@gmail.com</a></span>
+        <span class="separator">•</span>
+        <span class="contact-item"><a href="https://www.linkedin.com/in/bryan-martinez-04183828a/"
+            target="_blank">linkedin.com/in/bryan-martinez-04183828a</a></span>
+        <span class="separator">•</span>
+        <span class="contact-item"><a href="https://github.com/BryanMartinez1529"
+            target="_blank">github.com/BryanMartinez1529</a></span>
+      </div>
+    </header>
+
+    <!-- RESUMEN PROFESIONAL -->
+    <section>
+      <h2 class="section-title">Perfil Profesional</h2>
+      <p class="summary">
+        <strong>Ingeniero en Sistemas de Información</strong> y <strong>Desarrollador Full Stack</strong> especializado
+        en arquitectura y desarrollo de sistemas <strong>ERP</strong>, microservicios y aplicaciones web escalables con
+        <strong>Java (Spring Boot), Python (Django REST), Node.js, React, TypeScript, PHP/Laravel y PostgreSQL</strong>.
+        Experiencia comprobada en módulos contables con <strong>facturación electrónica</strong>, automatización
+        comercial mediante <strong>CRM</strong>, <strong>auditoría financiera con IA & gestión documental</strong>, y
+        flujos <strong>ETL</strong>.
+      </p>
+    </section>
+
+    <!-- HABILIDADES TÉCNICAS -->
+    <section>
+      <h2 class="section-title">Habilidades Técnicas</h2>
+      <div class="skills-block">
+        <div class="skills-row"><strong>Lenguajes:</strong> JavaScript (ES6+), TypeScript, PHP, Python, Java, C#, SQL,
+          PL/pgSQL, HTML5, CSS3.</div>
+        <div class="skills-row"><strong>Frontend:</strong> React.js, Astro, Tailwind CSS, Bootstrap, Vite, Responsive
+          Web Design, Web Semántica.</div>
+        <div class="skills-row"><strong>Backend & APIs:</strong> Java (Spring Boot), Python (Django REST), Node.js,
+          Express.js, Laravel, RESTful APIs, JWT, MVC, ETL.</div>
+        <div class="skills-row"><strong>Bases de Datos:</strong> PostgreSQL, MySQL, MongoDB, SQLite, SQL Server,
+          Procedimientos Almacenados, Triggers, Jobs.</div>
+        <div class="skills-row"><strong>DevOps & Infraestructura:</strong> Git, GitHub, Docker, Kubernetes (conceptos),
+          Administración Linux (Ubuntu/Debian, Apache, Nginx, Proxy), Postman, CI/CD.</div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCIA LABORAL -->
+    <section>
+      <h2 class="section-title">Experiencia Laboral</h2>
+
+      <article class="item-block">
+        <div class="item-header">
+          <span class="item-title">Analista de Sistemas & Desarrollador de Software</span>
+          <span class="item-date">Octubre 2024 – Presente</span>
+        </div>
+        <div class="item-subheader">
+          <span>Experticia Contable EXPERCONTA Cía. Ltda.</span>
+          <span class="item-location">Quito, Ecuador</span>
+        </div>
+        <ul class="item-bullets">
+          <li><strong>Desarrollo de ERP Empresarial:</strong> Diseñé e implementé sistema ERP modular con gestión
+            operativa, comercial, contabilidad y auditoría financiera.</li>
+          <li><strong>Auditoría Financiera con IA & Gestión Documental:</strong> Desarrollé módulo de control y
+            auditoría con gestión documental y carga de información contable, integrando <strong>Inteligencia Artificial
+              (IA)</strong> para análisis y recomendaciones automatizadas.</li>
+          <li><strong>Módulo Contable & Facturación Electrónica:</strong> Desarrollé subsistema contable con facturación
+            electrónica automatizada (validación tributaria, firma digital XML, RIDE) y gestión de cobros, reduciendo
+            tiempos de emisión en un 40%.</li>
+          <li><strong>CRM & Automatización Comercial:</strong> Implementé módulo CRM para control del ciclo de clientes,
+            automatizando asignación de tareas y seguimiento de ventas.</li>
+          <li><strong>Bases de Datos & ETL en PostgreSQL:</strong> Modelé esquemas relacionales con procedimientos y
+            triggers en <strong>PL/pgSQL</strong>, y flujos <strong>ETL</strong> para migración de datos contables.</li>
+          <li><strong>Infraestructura & Soporte:</strong> Administré servidores Linux y estaciones de trabajo,
+            garantizando 99.8% de disponibilidad y continuidad operativa.</li>
+        </ul>
+      </article>
+
+      <article class="item-block">
+        <div class="item-header">
+          <span class="item-title">Desarrollador Web</span>
+          <span class="item-date">Octubre 2023 – Marzo 2024</span>
+        </div>
+        <div class="item-subheader">
+          <span>Universidad Técnica de Cotopaxi (Facultad CIYA)</span>
+          <span class="item-location">Cotopaxi, Ecuador</span>
+        </div>
+        <ul class="item-bullets">
+          <li><strong>Gestor de Convenios de Vinculación:</strong> Desarrollé aplicativo web para digitalizar convenios
+            institucionales con control de roles (RBAC) y reportes automáticos en PDF.</li>
+        </ul>
+      </article>
+
+      <article class="item-block">
+        <div class="item-header">
+          <span class="item-title">Técnico de Infraestructura TI & Mantenimiento (Prácticas)</span>
+          <span class="item-date">Octubre 2022 – Marzo 2023</span>
+        </div>
+        <div class="item-subheader">
+          <span>Unidad Educativa "Primero de Abril"</span>
+          <span class="item-location">Cotopaxi, Ecuador</span>
+        </div>
+        <ul class="item-bullets">
+          <li>Mantenimiento preventivo/correctivo de hardware, software y redes locales en laboratorios informáticos.
+          </li>
+        </ul>
+      </article>
+    </section>
+
+    <!-- PROYECTOS DESTACADOS -->
+    <section>
+      <h2 class="section-title">Proyectos Técnicos Destacados</h2>
+
+      <article class="item-block">
+        <div class="item-header">
+          <span class="item-title">Sistema ERP Empresarial EXPERCONTA | <em>Full Stack Architecture</em></span>
+          <span class="item-date">Spring Boot • Django • React • PostgreSQL</span>
+        </div>
+        <p class="summary" style="font-size: 8pt;">
+          ERP integral con facturación electrónica SRI automatizada, CRM comercial y módulo de auditoría financiera con
+          IA para diagnósticos y recomendaciones.
+        </p>
+      </article>
+
+      <article class="item-block">
+        <div class="item-header">
+          <span class="item-title">Plataforma Web WMD Arquitectura | <em>Frontend & Web Performance</em></span>
+          <span class="item-date"><a href="https://www.wmd-arquitecto.com/"
+              target="_blank">wmd-arquitecto.com</a></span>
+        </div>
+        <p class="summary" style="font-size: 8pt;">
+          Portal comercial y catálogo interactivo de proyectos arquitectónicos con alta fidelidad visual, SEO y
+          velocidad de carga optimizada (&lt;1.1s).
+        </p>
+      </article>
+
+      <article class="item-block">
+        <div class="item-header">
+          <span class="item-title">Administrador de Pacientes Veterinarios (APV) | <em>MERN Stack</em></span>
+          <span class="item-date"><a href="https://apvfrontend.netlify.app/" target="_blank">Demo</a> | <a
+              href="https://github.com/BryanMartinez1529/frontend_apv" target="_blank">GitHub</a></span>
+        </div>
+        <p class="summary" style="font-size: 8pt;">
+          Plataforma web reactiva con autenticación JWT, API RESTful y MongoDB para control clínico y citas.
+        </p>
+      </article>
+    </section>
+
+    <!-- EDUCACIÓN Y FORMACIÓN -->
+    <section>
+      <h2 class="section-title">Educación</h2>
+      <div class="education-grid">
+        <article class="item-block">
+          <div class="item-header">
+            <span class="item-title">Maestría en Sistemas de Información (Data Science)</span>
+          </div>
+          <div class="item-subheader">
+            <span>Universidad de Los Hemisferios</span>
+            <span class="item-date">Nov 2025 – Presente</span>
+          </div>
+        </article>
+
+        <article class="item-block">
+          <div class="item-header">
+            <span class="item-title">Ingeniería en Sistemas de Información</span>
+          </div>
+          <div class="item-subheader">
+            <span>Universidad Técnica de Cotopaxi</span>
+            <span class="item-date">Graduado</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- CERTIFICACIONES Y CURSOS -->
+    <section>
+      <h2 class="section-title">Certificaciones & Cursos</h2>
+      <ul class="item-bullets">
+        <li><strong>Curso Profesional de React:</strong> React.js, Hooks, Componentes y JS Moderno — Código Facilito
+          (2026).</li>
+        <li><strong>Bootcamp Java Profesional (POO):</strong> Arquitectura de Clases y POO Avanzada en Java — Código
+          Facilito (2024).</li>
+        <li><strong>Universidad Desarrollo Web - FrontEnd:</strong> HTML5, CSS3, JavaScript Avanzado — Udemy (2024).
+        </li>
+        <li><strong>Introducción a DevOps:</strong> Docker, CI/CD, Automatización de Despliegues — Código Facilito
+          (2024).</li>
+      </ul>
+    </section>
+
+  </main>
+</body>
+
+</html>
